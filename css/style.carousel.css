@@ -61,3 +61,6 @@
     margin: 4px;
 }
 
+.owl-dots .owl-dot.active{
+    background: #f47933;
+}

@@ -45,3 +45,22 @@
     -webkit-border-radius: 4px 0 0 4px;
 }
 
+.owl-dots{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    bottom: 15px;
+    text-align: center;
+}
+
+.owl-dots .owl-dot{
+    background: #fff;
+    display: inline-block;
+    width: 35px;
+    height: 10px;
+    margin: 4px;
+}
+
+.owl-dots .owl-dot.active{
+    background: #f47933;
+}

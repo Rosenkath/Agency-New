@@ -11,6 +11,7 @@ $(document).ready(function(){
         loop:true,
         margin:10,
         nav: true,
-        navText:['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>']
+        navText:['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+        dots: true
     });
 });

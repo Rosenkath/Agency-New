@@ -159,6 +159,59 @@
     margin: 0 10px;
 }
 
+/* AGENCIA */
+
+.agencia{
+  background: #f5f5f5;
+  padding: 50px 0;
+}
+
+.agencia-title{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.375rem;
+}
+
+.agencia-title strong{
+  color: #01c0b5;
+  font-size: 1.875rem;
+}
+
+.agencia-item{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.agencia-item-icon{
+  background: #01c0b5;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  font-size: 6rem;
+  position: relative;
+}
+
+.agencia-item-icon:before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -22px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #01c0b5;
+}
+
+.agencia-item h2{
+  font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  margin: 25px 0 5px 0;
+  text-transform: uppercase;
+}
+
+
+
 /* BREAKPOINTS
 ==========================================*/
 /* MAX-WIDHT */
@@ -172,6 +225,12 @@
   .header{
       height: 58px;
       
+  }
+
+  /*Carousel principal*/
+
+  #carousel-principal{
+    height: calc(100% - 58px);
   }
 
   /* Header Logo */
@@ -230,6 +289,29 @@
 
 /* MIN-WIDHT */
 
+@media (min-width: 768px) {
+  /*Carousel*/
+
+#caroulsel_principal .owl-caption{
+  padding: 30px;
+  font-size: 1.6rem;
+}
+#caroulsel-principal .owl-caption strong{
+  font-size: 2.5rem;
+}
+
+  /* agência */
+  .agencia-item{
+    float: left;
+    width: calc((100% - 4%) /2);
+    margin-right: 4%;
+  }
+
+  .agencia-item:nth-of-type(2n+0){
+    margin-right: 0;
+  }
+}
+
 @media (min-width: 960px) {
       /*Header*/
 
@@ -245,6 +327,17 @@
     width: 100%;
     top: -31px;
     left:0;
+  }
+
+  /* agência */
+  .agencia-item:nth-of-type(2n+0),
+  .agencia-item{
+    width: calc((100% - 8%) /3);
+    margin-right: 4%;
+  }
+
+  .agencia-item:nth-of-type(3n+0){
+    margin-right: 0;
   }
 
 }

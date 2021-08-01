@@ -255,34 +255,138 @@
 }
 
 .equipe-list li{
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
   background: #fff;
   width: 100%;
   max-width: 322px;
   display: inline-block;
   border: 1px solid #ccc;
 }
+  /* Foto */
 
 .equipe-foto{
   height: 240px;
   overflow: hidden;
+  position: relative;
 }
 
 .equipe-foto img{
   position: relative;
   top: 50%;
-  transform: translateY(-70%);
-  -webkit-transform: translateY(-70%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
+
+.equipe-foto-hover{
+  z-index: 1;
+  position: absolute;
+  background: rgba(45, 63, 81, 0.85);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transform: scale(.4) rotate(400deg);
+  -webkit-transform: scale(.4) rotate(400deg);
+}
+
+.equipe-foto-hover div{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.equipe-foto-hover span{
+  color: #fff;
+  font-size: 1.125rem;
+  position: relative;
+}
+
+.equipe-foto-hover span:before,
+.equipe-foto-hover span:after{
+  content: "";
+  background: #fff;
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  top: 50%;
+
+}
+
+.equipe-foto-hover span:before{
+  left: -50px;
+}
+
+.equipe-foto-hover span:after{
+  right: -50px;
+}
+
+
+
+.equipe-foto-hover a{
+  color: #fff;
+  font-size: 0.875rem;
+  background: #f47933;
+  padding: 3px 10px;
+  position: relative;
+  top: 5px;
+}
+
+.equipe-foto-hover a:hover{
+  background: #ca5818;
+}
+
+    /* Titulo  */
 
 .equipe-title{
   padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+}
+
+.equipe-title:before{
+  position: absolute;
+  content: "";
+  background: #f47933;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
 }
 
 .equipe-title strong{
-  font-family: 'Oswald', sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
-  text-transform: uppercase;
+  position: relative;
+}
+
+/* Equipe Hover */
+
+.equipe-list li:hover .equipe-foto-hover{
+  opacity: 1;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  transform: scale(1) rotate(0deg);
+  -webkit-transform: scale(1) rotate(0deg);
+}
+
+.equipe-list li:hover .equipe-title:before{
+  top: 0;
+}
+.equipe-list li:hover .equipe-title{
+  color: #fff;
 }
 
 /* BREAKPOINTS
@@ -464,6 +568,3 @@
   }
 
 }
-
-
-

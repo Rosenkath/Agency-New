@@ -18,6 +18,5 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 1000,
         responsiveRefreshRate: 10
-        
     });
 });

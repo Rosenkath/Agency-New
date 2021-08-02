@@ -21,7 +21,7 @@ $(document).ready(function(){
     });
         //carousel testemunhas
     $('#carousel-testemunhas').owlCarousel({
-        items:2,
+        items:1,
         loop:true,
         margin:40,
         nav: false,

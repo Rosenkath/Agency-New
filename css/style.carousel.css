@@ -92,3 +92,28 @@
       font-size: 1.5rem;
   }
 
+
+  /* Carousel Testemunhas */
+
+  
+  #carousel-testemunhas .owl-prev,
+  #carousel-testemunhas .owl-next{
+      padding: 5px 11px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+  }
+
+  #carousel-testemunhas .owl-next{
+    right: -50px;
+}
+
+  #carousel-testemunhas .owl-prev{
+    left: -50px;
+}
+
+
+
+  #carousel-testemunhas .owl-dots{
+    position: relative;
+    top: 20px;
+  }

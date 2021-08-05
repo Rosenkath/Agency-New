@@ -596,8 +596,23 @@
   position: relative;
   display: none;
 }
+
 .portfolio.visible{
   display: block;
+  animation: animaportfolio .7s ease;
+  -webkit-animation: animaportfolio .7s ease;
+}
+
+@keyframes animaportfolio{
+  0%{
+    transform: scale(.5);
+    -webkit-transform: scale(.5);
+  }
+
+  100%{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
 }
 
 .portfolio img{
@@ -655,12 +670,114 @@
   line-height: 1;
 }
 
-/* HOVER */
+/* portfólio hover */
 
 .portfolio:hover .portfolio-hover{
 opacity: 1;
 }
 
+/* Clientes
+==========================================*/
+
+.clientes{
+  background: #f5f5f5;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.clientes p{
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.clientes ul li{
+  font-size: 5rem;
+  background: #fff;
+  padding: 5px 20px;
+  margin-top: 20px;
+  line-height: 1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* blog 
+==========================================*/
+
+.blog{
+  background: #f5f5f5;
+  padding: 50px 0;
+}
+
+.blog .content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-item{
+  background: #333;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.blog-item:last-child{
+  margin-bottom: 0;
+}
+
+.blog-item-thumb{
+  position: relative;
+}
+
+.blog-item-thumb img{
+  display: 	block;
+}
+
+.blog-item-thumb span{
+  position: absolute;
+  right: 10px;
+  padding: 3px 10px;
+  font-size: 0.6875rem;
+}
+
+.blog-item-thumb span:first-child{
+  color: #01c0b5;
+  background: rgba(255, 255, 255, 0.9);
+  bottom: 0;
+}
+
+.blog-item-thumb span:nth-child(2){
+  color: #fff;
+  background: #01c0b5;
+  top: 100%;
+}
+
+.blog-item h2{
+  font-size: 1rem;
+  margin: 10px 0 5px 0;
+  max-width: 88%;
+}
+
+.blog-item p{
+  font-size: 0.875rem;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.blog-item .blog-link{
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.blog-item .blog-link a{
+  color: #f47933;
+  font-weight: 700;
+}
+
+.blog-item .blog-link a:hover{
+  text-decoration: underline;
+}
 
 /* BREAKPOINTS
 ==========================================*/
@@ -757,6 +874,18 @@ opacity: 1;
     width: calc(100% - 120px);
   }
 
+  /* Clientes */
+
+  .clientes ul li{
+    float: left;
+    width: 48%;
+    margin:4% 4% 0 0;
+  }
+
+  .clientes ul li:nth-of-type(2n+0){
+    margin-right: 0;
+  }
+
 }
 
 @media (min-width: 667px) {
@@ -783,6 +912,23 @@ opacity: 1;
   .servicos-item:nth-of-type(1n + 3) {
     margin-top: 4%;
   }
+
+     /* portfólio */
+
+     .portfolio{
+      width: calc(100% / 2);
+    }
+
+    /* blog */
+
+    .blog-item{
+      width: 48%;
+      margin: 0;
+    }
+
+    .blog-item:nth-of-type(1n+3){
+      margin-top: 4%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -812,6 +958,18 @@ opacity: 1;
   .curiosidades ul li {
     width: 25%;
   }
+
+  /* Clientes */
+  .clientes ul li:nth-of-type(2n+0),
+  .clientes ul li{
+    width: calc((100% - 6%) / 3);
+    margin: 3% 3% 0 0;
+  }
+
+  .clientes ul li:nth-of-type(3n+0){
+    margin-right: 0;
+  }
+
 }
 
 @media (min-width: 960px) {
@@ -855,6 +1013,12 @@ opacity: 1;
   .equipe-list li:not(:first-child) {
     border-left: 0;
   }
+
+    /* Portfólio */
+
+    .portfolio{
+      width: calc(100% / 3);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -866,12 +1030,32 @@ opacity: 1;
 }
 
 @media (min-width: 1144px) {
+  /* Header */
   .header-logo {
     width: auto;
   }
 
   .header-nav ul li a {
     font-size: 1rem;
+  }
+
+  /* Clientes */
+  .clientes ul li:nth-of-type(2n+0),
+  .clientes ul li:nth-of-type(3n+0),
+  .clientes ul li{
+    width: calc((100% - 15%) / 6);
+    margin: 3% 3% 0 0;
+  }
+
+  .clientes ul li:nth-of-type(6n+0){
+    margin-right: 0;
+  }
+
+  /* blog */
+  .blog-item:nth-of-type(1n+3),
+  .blog-item{
+    width: calc((100% - 9%) / 4);
+    margin: 0;
   }
 }
 
@@ -905,4 +1089,18 @@ opacity: 1;
     margin-right: 0;
   }
 
+  /* portfólio */
+
+  .portfolio{
+    width: calc(100% / 4);
+  }
+
+}
+
+@media(min-width: 1366px){
+  /* Portfólio */
+
+  .portfolio{
+    width: calc(100% / 5);
+  }
 }

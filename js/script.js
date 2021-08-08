@@ -1,4 +1,21 @@
 $(document).ready(function(){
+
+    //dialog
+    $('.dialog-close').click(function(){
+        $('.dialog-body').fadeOut('200', function(){
+            $('.dialog').fadeOut('200')
+        });
+    });
+
+    $('.dialog-open').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $('.dialog').fadeIn('200', function(){
+            $(target).fadeIn('200')
+        });
+    });
+
+    //nav Toggle
     $('#nav-toggle').click(function(e){
        e.preventDefault();
         $(this).toggleClass('active');
@@ -6,7 +23,6 @@ $(document).ready(function(){
     })
 
     //Scroll
-
     var nav = $('.header-nav'),
         navHeight = nav.outerHeight(),
         sections = $('.section');
@@ -100,6 +116,24 @@ $(document).ready(function(){
             }
         }
     });
+
+    //carousel Portfolio
+
+    $('.carousel-portfolio').owlCarousel({
+        items:1,
+        lazyLoad:true,
+        loop:true,
+        margin:10,
+        nav: true,
+        navSpeed:1000,
+        navText:['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
+        dots: false,
+        dotsSpeed: 1000,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        responsiveRefreshRate: 10
+    });
+
 
     //portfólio
 

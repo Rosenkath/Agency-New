@@ -250,6 +250,59 @@
 /* Equipe 
 ==========================================*/
 
+/* Modal */
+
+.dialog-equipe-photo{
+  height: 226px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dialog-equipe-photo img{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.dialog-equipe-redes{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dialog-equipe-redes a{
+  color: #2c3e50;
+  font-size: 2rem;
+  margin:0 10px;
+}
+
+.dialog-equipe-redes a:hover{
+  color: #f47933;
+}
+
+/* conteúdo */
+
+.dialog-equipe-habilidade span{
+  float: right;
+}
+
+.dialog-equipe-habilidade li{
+  margin-bottom: 10px;
+}
+
+.dialog-equipe-habilidade li div{
+  background: #eee;
+  height: 13px;
+  position: relative;
+}
+
+.dialog-equipe-habilidade li div span{
+  background: #01c0b5;
+  height: 100%;
+  position: absolute;
+  width: 1%;
+}
+
 .equipe {
   background: #f5f5f5;
   padding: 50px 0;
@@ -1048,6 +1101,22 @@ opacity: 1;
 }
 
 @media (min-width: 768px) {
+
+/* Modal */
+  .dialog-body{
+    padding: 0 20px;
+  }
+
+  .dialog-equipe .dialog-cols{
+    float: left;
+    width: 40%;
+  }
+
+  .dialog-equipe .dialog-cols:last-child{
+    float: right;
+    width: 56%;
+  }
+
   /*Carousel*/
 
   #caroulsel_principal .owl-caption {
@@ -1131,9 +1200,25 @@ opacity: 1;
     margin-left: 20px;
   }
 
+
+
 }
 
 @media (min-width: 960px) {
+
+  /* modal */
+
+  .dialog-portfolio .dialog-cols{
+    float: left;
+    width: 68%;
+  }
+
+  .dialog-portfolio .dialog-cols:last-child{
+    float: right;
+    width: 30%;
+  }
+
+
   /*Header*/
 
   @keyframes animaHeader{

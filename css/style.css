@@ -1020,6 +1020,9 @@ opacity: 1;
 /* MIN-WIDHT */
 
 @media (min-width: 320px) {
+
+    /* portfólio */
+    
   .portfolio{
     width: calc(100% / 1);
   }
@@ -1060,6 +1063,8 @@ opacity: 1;
   .contato-infos span{
     width: 80%;
   }
+
+    /* portfólio */
 
   .portfolio{
     width: calc(100% / 2);
@@ -1209,9 +1214,6 @@ opacity: 1;
   .footer-redes a:not(:first-child){
     margin-left: 20px;
   }
-
-
-
 }
 
 @media (min-width: 960px) {

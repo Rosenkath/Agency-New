@@ -1019,6 +1019,12 @@ opacity: 1;
 
 /* MIN-WIDHT */
 
+@media (min-width: 320px) {
+  .portfolio{
+    width: calc(100% / 1);
+  }
+}
+
 @media (min-width: 480px) {
   /* Curiosidades */
   .curiosidades ul li {
@@ -1053,6 +1059,10 @@ opacity: 1;
 
   .contato-infos span{
     width: 80%;
+  }
+
+  .portfolio{
+    width: calc(100% / 2);
   }
 
 }
